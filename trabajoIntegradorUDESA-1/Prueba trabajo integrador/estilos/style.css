@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/fondo.jpeg);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header #logo img {
+    height: 50px;
+}
+
+header #search input[type="text"] {
+    padding: 5px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;       /*color de inicio /genero /favoritos*/
+}
+.busqueda{
+    margin: 0px 5px 0px 5px;
+}
+.listaPeliculasIndex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.peliculaIndex {
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1); /* sombra*/
+    width: 250px;
+    height: 450px;
+    text-align: center;
+    color: whitesmoke;
+    transition: 0.2s;
+
+}
+.footer {
+    background-color: black;
+    color: whitesmoke;
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.imagenPeliculaIndex {
+    width: 200px;
+    height: 300px;
+    
+}
+.titulos{
+    margin-left: 40px;
+    margin-bottom: 40px;
+    color: whitesmoke;
+}
+.detalles{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.peliculaIndex:hover{
+    transform: scaleY(1.05);
+    box-shadow: 0 0 20px rgba(255, 254, 254, 0.744);
+}
+.titulosdetalle{
+    color: whitesmoke;
+    margin-left: 7%;
+}
+.infodetalle{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-height: 100%;
+    background-color: black;    
+}
+.favoritos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3%;
+}
+.fav{
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    text-decoration: none;
+    color: whitesmoke;
+}
+.descripcion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.video{
+    width: 70vw;
+    height: 90vh;
+}

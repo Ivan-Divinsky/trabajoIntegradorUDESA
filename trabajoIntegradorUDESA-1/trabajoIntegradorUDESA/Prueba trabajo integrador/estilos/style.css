@@ -67,6 +67,11 @@ header nav ul li a {
     height: 300px;   
 }
 
+.detalles{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 
 /* DETALLES PELICULAS */
 
@@ -110,10 +115,7 @@ header nav ul li a {
     margin-bottom: 40px;
     color: whitesmoke;
 }
-.detalles{
-    text-decoration: none;
-    color: whitesmoke;
-}
+
 .peliculaIndex:hover{
     transform: scaleY(1.05);
     box-shadow: 0 0 20px rgba(255, 254, 254, 0.744);

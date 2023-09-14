@@ -7,6 +7,8 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* NAVBAR */
+
 .header {
     background-color: black;
     color: white;
@@ -39,6 +41,9 @@ header nav ul li a {
 .busqueda{
     margin: 0px 5px 0px 5px;
 }
+
+/* INDEX */
+
 .listaPeliculasIndex {
     display: flex;
     flex-direction: row;
@@ -55,8 +60,36 @@ header nav ul li a {
     text-align: center;
     color: whitesmoke;
     transition: 0.2s;
-
 }
+
+.imagenPeliculaIndex {
+    width: 200px;
+    height: 300px;   
+}
+
+
+/* DETALLES PELICULAS */
+
+.boxDetallePelicula{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titulosdetalle{
+    color: whitesmoke;
+    margin-left: 7%;
+}
+.infodetalle{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-height: 100%;
+    background-color: black;    
+}
+
+/* FOOTER */
+
 .footer {
     background-color: black;
     color: whitesmoke;
@@ -64,11 +97,7 @@ header nav ul li a {
     text-align: center;
 }
 
-.imagenPeliculaIndex {
-    width: 200px;
-    height: 300px;
-    
-}
+
 .titulos{
     margin-left: 40px;
     margin-bottom: 40px;
@@ -82,17 +111,7 @@ header nav ul li a {
     transform: scaleY(1.05);
     box-shadow: 0 0 20px rgba(255, 254, 254, 0.744);
 }
-.titulosdetalle{
-    color: whitesmoke;
-    margin-left: 7%;
-}
-.infodetalle{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    min-height: 100%;
-    background-color: black;    
-}
+
 .favoritos{
     display: flex;
     flex-direction: row;
@@ -106,11 +125,7 @@ header nav ul li a {
     text-decoration: none;
     color: whitesmoke;
 }
-.descripcion{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 .video{
     width: 70vw;
     height: 90vh;

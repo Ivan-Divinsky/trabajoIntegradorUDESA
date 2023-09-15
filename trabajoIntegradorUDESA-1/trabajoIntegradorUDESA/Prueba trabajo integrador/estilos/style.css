@@ -177,6 +177,8 @@ body {
 .listaDeGeneros {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
 }
 
 .Genero {
@@ -187,16 +189,20 @@ body {
     padding: 20px;
     text-align: center;
     margin-top: 5vh;
+    text-decoration: none;
 }
 
 .clasico{
-    background-image: url(../img/clasico.jpg);
+    background-image: url(../img/clasico.webp);
+    background-size:cover;
 }
 .accion{
     background-image: url(../img/accion.jpg);
+    background-size:cover;
 }
 .drama{
     background-image: url(../img/drama.jpeg);
+    background-size:cover;
 }
 .generoadetalle{
     text-decoration: none;
@@ -206,10 +212,27 @@ body {
     align-items: center;
     justify-content: center;
 }
+@media(max-width: 600px){
+    .Genero{
+        width: 45vw;
+    }
+}
+.enlacecruzado{
+    text-decoration: none;
+}
+
+/* BUSQUEDA */
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
 
 /* FOOTER */
 
-.footer {
+.footer{
     background-color: black;
     color: whitesmoke;
     padding: 5px;
@@ -228,6 +251,3 @@ body {
     transform: scaleY(1.05);
     box-shadow: 0 0 20px rgba(255, 254, 254, 0.744);
 }
-
-
-

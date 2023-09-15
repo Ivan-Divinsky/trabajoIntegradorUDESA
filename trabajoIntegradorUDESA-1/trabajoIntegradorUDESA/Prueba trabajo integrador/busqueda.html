@@ -18,13 +18,13 @@
             </a>
         </div>
         <div id="search">
-            <form action="busqueda.html" method="get">
+            <form action="search-results.html" method="get">
                 <input type="text" name="query" placeholder="Buscar...">
-                <input type="submit" value="Buscar">
+                <a href=""><input type="submit" value="Buscar"></a>
             </form>
         </div>
         <nav>
-            <ul>
+            <ul class="listaNavbar">
                 <li class="busqueda"><a href="index.html">Inicio</a></li>
                 <li class="busqueda"><a href="generos.html">Géneros</a></li>
                 <li class="busqueda"><a href="favoritos.html">Favoritos</a></li>
@@ -34,20 +34,17 @@
 
     <main>
         <section>
-            <h1 class="titulos">Géneros</h1>
-            <ul class="listaDeGeneros">
+            <h2 class="titulos">Resultado de búsqueda</h2>
+        <section class="busqueda">
+            <ul class="listaPeliculasIndex"></ul>
+                <div class="peliculaIndex">
+                    <a class="detalles" href="./breakingbad.html">
+                        <img src="./img/lossoprano_portada.jpg" alt="Los Soprano" class="imagenPeliculaIndex">
+                        <h3>Los Soprano</h3>
+                    </a>
+                    <p>Fecha de Estreno: 10 de enero de 1999</p>
+                </div>
 
-                <a class="generoadetalle"  href="./clasicos.html"><div class="Genero clasico">
-                    <h2>CLASICOS</h2>
-                </div></a>
-
-                <a class="generoadetalle" href="./accion.html"><div class="Genero accion">
-                    <h2>ACCIÓN</h2>
-                </div></a>
-
-                <a class="generoadetalle" href="./drama.html"><div class="Genero drama">
-                    <h2>DRAMA</h2>
-                </div></a>
             </ul>
         </section>
 
@@ -55,10 +52,6 @@
     <footer class="footer">
         <p>Integrantes del Equipo: IVAN DIVINSKY, GERONIMO ACTIS, CELLILLI MAXIMO </p>
     </footer>
-    </section>
-    </main>
-
-    <!-- ... (footer) ... -->
 </body>
 
 </html>

@@ -19,6 +19,9 @@ function ponergeneros(objeto, objeto2) {
 
 let infodetalle = document.querySelector(".infodetalle")
 let varURL=""
+
+let listaPeliculasIndex = document.querySelector(".listaPeliculasIndex")
+let verRecomendaciones = document.querySelector(".verRecomendaciones")
 if(type==="movie"){
     varURL = `https://api.themoviedb.org/3/movie/${id}?api_key=3c52a38246232970e5307a092f7321bc`
     fetch(varURL)
@@ -43,6 +46,33 @@ if(type==="movie"){
         console.log("El error es: " + error)
     })
 
+    verRecomendaciones.addEventListener("click", function(){
+
+        verRecomendaciones.style.display = "none"
+    
+        fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=3c52a38246232970e5307a092f7321bc`)
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(data){
+            console.log(data)
+            for(let i = 0; i < 5; i++){
+                listaPeliculasIndex.innerHTML += `
+                    <div class="peliculaIndex">
+                        <a class="detalles" href="./detalle.html?id=${data.results[i].id}&type=${type}">
+                        <img src=https://image.tmdb.org/t/p/w342/${data.results[i].poster_path} alt=${data.results[i].title} class="imagenPeliculaIndex">
+                        <h3>${data.results[i].title}</h3>
+                        </a>
+                        <p>Fecha de Estreno: ${data.results[i].release_date}</p>
+                    </div>            
+                `
+            }
+        })
+        .catch(function(error){
+            console.log("Error: " + error);
+        })
+        
+    })
 }else if(type==="tv"){
     varURL = `https://api.themoviedb.org/3/tv/${id}?api_key=3c52a38246232970e5307a092f7321bc`
     fetch(varURL)
@@ -67,4 +97,34 @@ if(type==="movie"){
         console.log("El error es: " + error)
     })
 
+    verRecomendaciones.addEventListener("click", function(){
+
+        verRecomendaciones.style.display = "none"
+    
+        fetch(`https://api.themoviedb.org/3/tv/${id}/recommendations?api_key=3c52a38246232970e5307a092f7321bc`)
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(data){
+            console.log(data)
+            for(let i = 0; i < 5; i++){
+                listaPeliculasIndex.innerHTML += `
+                    <div class="peliculaIndex">
+                        <a class="detalles" href="./detalle.html?id=${data.results[i].id}&type=${type}">
+                        <img src=https://image.tmdb.org/t/p/w342/${data.results[i].poster_path} alt=${data.results[i].name} class="imagenPeliculaIndex">
+                        <h3>${data.results[i].name}</h3>
+                        </a>
+                        <p>Fecha de Estreno: ${data.results[i].first_air_date}</p>
+                    </div>            
+                `
+            }
+        })
+        .catch(function(error){
+            console.log("Error: " + error);
+        })
+        
+    })
+    
 }
+
+

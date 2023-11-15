@@ -136,6 +136,11 @@ body {
     text-decoration: none;
     color: whitesmoke;
 }
+.recomendaciones{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
 
 @media (max-width: 1350px)  {
     .video {
@@ -176,36 +181,19 @@ body {
 
 .listaDeGeneros {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2% 2% 2% 2%;
 }
-
 .Genero {
     color: whitesmoke;
-    width: 23vw;
-    height: 13vh;
     justify-content: center;
-    padding: 20px;
     text-align: center;
-    margin-top: 5vh;
     text-decoration: none;
-}
-
-.clasico{
-    background-image: url(../img/clasico.webp);
-    background-size:cover;
-}
-.accion{
-    background-image: url(../img/accion.jpg);
-    background-size:cover;
-}
-.drama{
-    background-image: url(../img/drama.jpeg);
-    background-size:cover;
 }
 .generoadetalle{
     text-decoration: none;
+    margin: 2%;
 }
 .listaDeGeneros{
     display: flex;

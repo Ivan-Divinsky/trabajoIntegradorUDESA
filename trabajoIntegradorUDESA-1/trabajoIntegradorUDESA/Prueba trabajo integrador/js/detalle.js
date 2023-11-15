@@ -20,8 +20,11 @@ function ponergeneros(objeto, objeto2) {
 let infodetalle = document.querySelector(".infodetalle")
 let varURL=""
 
+let trailer = document.querySelector(".trailer")
+
 let listaPeliculasIndex = document.querySelector(".listaPeliculasIndex")
 let verRecomendaciones = document.querySelector(".verRecomendaciones")
+
 if(type==="movie"){
     varURL = `https://api.themoviedb.org/3/movie/${id}?api_key=3c52a38246232970e5307a092f7321bc`
     fetch(varURL)
@@ -40,6 +43,9 @@ if(type==="movie"){
             <article class="favoritos">
                 <a class="fav" href="favoritos.html">Añadir a Favoritos</a>
             </article>
+            `
+            trailer.innerHTML = `
+            <img class="video" src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" alt="Imagen Pelicula"/>
             `
     })
     .catch(function(error){
@@ -91,6 +97,9 @@ if(type==="movie"){
             <article class="favoritos">
                 <a class="fav" href="favoritos.html">Añadir a Favoritos</a>
             </article>
+            `
+            trailer.innerHTML = `
+            <img class="video" src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" alt="Imagen Pelicula"/>
             `
     })
     .catch(function(error){

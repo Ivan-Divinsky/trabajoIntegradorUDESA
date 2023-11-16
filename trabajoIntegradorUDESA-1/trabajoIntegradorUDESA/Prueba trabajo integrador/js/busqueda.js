@@ -17,9 +17,8 @@ function ingresarPeliculas(data, elementoAInyectar, type) {
     }
 }
 
-function a() {
-    resultado.innerHTML = valorDeBusqueda
-}
+resultado.innerHTML = 'Resultados de búsqueda para: ' + valorDeBusqueda
+
 
 window.addEventListener('load', function(){
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=3c52a38246232970e5307a092f7321bc&query=${valorDeBusqueda}`)

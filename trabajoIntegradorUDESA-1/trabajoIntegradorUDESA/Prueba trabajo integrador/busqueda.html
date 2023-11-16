@@ -18,11 +18,11 @@
             </a>
         </div>
         <div id="search">
-            <form action="search-results.html" method="get">
-                <input type="text" name="query" placeholder="Buscar...">
-                <a href=""><input type="submit" value="Buscar"></a>
-            </form>
-        </div>
+            <form action="busqueda.html" method="get">
+                 <input id="textoBusqueda" type="text" name="query" placeholder="Buscar...">
+                 <input id="submitDeBusqueda" type="submit" value="Buscar">
+             </form>
+         </div>
         <nav>
             <ul class="listaNavbar">
                 <li class="busqueda"><a href="index.html">Inicio</a></li>
@@ -34,18 +34,12 @@
 
     <main>
         <section>
-            <h2 class="titulos">Resultado de búsqueda</h2>
-        <section class="busqueda">
-            <ul class="listaPeliculasIndex"></ul>
-                <div class="peliculaIndex">
-                    <a class="detalles" href="./breakingbad.html">
-                        <img src="./img/lossoprano_portada.jpg" alt="Los Soprano" class="imagenPeliculaIndex">
-                        <h3>Los Soprano</h3>
-                    </a>
-                    <p>Fecha de Estreno: 10 de enero de 1999</p>
-                </div>
-
-            </ul>
+            <h2 class="titulos"></h2>
+            <section class="busqueda">
+                <h2 class="titulos"></h2>
+                <ul class="listaPeliculasBusqueda">
+                </ul>
+            </section>
         </section>
 
     </main>

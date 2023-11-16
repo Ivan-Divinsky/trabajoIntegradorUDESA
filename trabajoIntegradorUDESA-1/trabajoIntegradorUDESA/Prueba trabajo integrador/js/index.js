@@ -1,3 +1,10 @@
+let botonBusqueda = document.querySelector('#submitDeBusqueda')
+
+botonBusqueda.addEventListener('click', function(){
+    let busqueda = document.querySelector('#textoBusqueda')
+    sessionStorage.setItem('busquedaUsuario', busqueda.value)
+})
+
 function ingresarPeliculas(data, elementoAInyectar, type){
     for(let i = 0; i < 5; i++){
         elementoAInyectar.innerHTML += `
@@ -7,10 +14,7 @@ function ingresarPeliculas(data, elementoAInyectar, type){
             <h3>${data.results[i].title}</h3>
             </a>
             <p>Fecha de Estreno: ${data.results[i].release_date}</p>
-        </div>
-        `
-}
-}
+        </div>`}}
 
 
 let listaPeliculasIndex = document.querySelector(".listaPeliculasIndex")
@@ -63,3 +67,4 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=3c52a38246232970e5307a09
 .catch(function(error){
     console.log("El error es: " + error)
 })
+

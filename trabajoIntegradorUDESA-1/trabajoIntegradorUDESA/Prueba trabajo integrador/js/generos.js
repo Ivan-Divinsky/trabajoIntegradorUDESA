@@ -1,3 +1,10 @@
+let botonBusqueda = document.querySelector('#submitDeBusqueda')
+
+botonBusqueda.addEventListener('click', function(){
+    let busqueda = document.querySelector('#textoBusqueda')
+    sessionStorage.setItem('busquedaUsuario', busqueda.value)
+})
+
 let generosPeliculas = document.querySelector(".generosPeliculas")
 
 fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=3c52a38246232970e5307a092f7321bc")

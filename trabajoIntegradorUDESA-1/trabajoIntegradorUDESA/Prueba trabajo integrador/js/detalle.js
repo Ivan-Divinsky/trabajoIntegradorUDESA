@@ -3,6 +3,12 @@ let queryStringObj = new URLSearchParams(queryString)
 let id = queryStringObj.get("id")
 let type = queryStringObj.get("type")
 
+let botonBusqueda = document.querySelector('#submitDeBusqueda')
+
+botonBusqueda.addEventListener('click', function(){
+    let busqueda = document.querySelector('#textoBusqueda')
+    sessionStorage.setItem('busquedaUsuario', busqueda.value)
+})
 
 function ponergeneros(objeto, objeto2) {
     let generos = ''

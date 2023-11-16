@@ -1,11 +1,10 @@
-let busqueda = document.getElementById('textoBusqueda')
-let resultado = document.querySelector('titulos')
-let botonBusqueda = document.getElementById('submitDeBusqueda')
-
+let resultado = document.querySelector('.titulos')
+let botonBusqueda = document.querySelector('#submitDeBusqueda')
+let valorDeBusqueda = sessionStorage.getItem('busquedaUsuario')
+let listaPeliculasBusqueda = document.querySelector(".listaPeliculasIndex")
 
 function ingresarPeliculas(data, elementoAInyectar, type) {
-
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 18; i++) {
         elementoAInyectar.innerHTML += `
         <div class="peliculaIndex">
             <a class="detalles" href="./detalle.html?id=${data.results[i].id}&type=${type}">
@@ -18,9 +17,12 @@ function ingresarPeliculas(data, elementoAInyectar, type) {
     }
 }
 
-botonBusqueda.addEventListener('click', function(){
-    let listaPeliculasBusqueda = document.querySelector(".listaPeliculasBusqueda")
-    fetch("https://api.themoviedb.org/3/search/movie?query=${busqueda}&include_adult=false&language=en-US&page=1")
+function a() {
+    resultado.innerHTML = valorDeBusqueda
+}
+
+window.addEventListener('load', function(){
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=3c52a38246232970e5307a092f7321bc&query=${valorDeBusqueda}`)
         .then(function (response) {
             return response.json()
         })
@@ -31,4 +33,8 @@ botonBusqueda.addEventListener('click', function(){
         .catch(function (error) {
             console.log("El error es: " + error)
         })
+    })
+    botonBusqueda.addEventListener('click', function(){
+        let busqueda = document.querySelector('#textoBusqueda')
+        sessionStorage.setItem('busquedaUsuario', busqueda.value)
     })

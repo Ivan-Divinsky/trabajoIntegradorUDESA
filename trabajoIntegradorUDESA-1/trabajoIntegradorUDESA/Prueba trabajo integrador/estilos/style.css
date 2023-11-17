@@ -60,7 +60,9 @@ body {
 }
 
 /* INDEX */
-
+.loader{
+    color: whitesmoke;
+}
 .listaPeliculasIndex {
     display: flex;
     flex-direction: row;
@@ -208,7 +210,10 @@ body {
 .enlacecruzado{
     text-decoration: none;
 }
-
+.titulosss{
+    color: whitesmoke;
+    margin-left: 10%;
+}
 /* BUSQUEDA */
 .busqueda{
     display: flex;
@@ -238,4 +243,7 @@ body {
 .peliculaIndex:hover{
     transform: scaleY(1.05);
     box-shadow: 0 0 20px rgba(255, 254, 254, 0.744);
+}
+.logoTMDB{
+    height: 15px;
 }

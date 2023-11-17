@@ -1,4 +1,9 @@
 let botonBusqueda = document.querySelector('#submitDeBusqueda')
+let loader1 = true
+let loader2 = true
+let loader3 = true
+
+let loader = document.querySelector(".loader")
 
 botonBusqueda.addEventListener('click', function(){
     let busqueda = document.querySelector('#textoBusqueda')
@@ -25,6 +30,10 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=3c52a38246232970e5307a
     .then(function(data){
         console.log(data)
         ingresarPeliculas(data, listaPeliculasIndex, "movie" )
+        loader1 = false
+        if(loader1 == false && loader2 == false && loader3 == false){
+            loader.style.display = "none"
+        }
     })
     .catch(function(error){
         console.log("El error es: " + error)
@@ -39,6 +48,11 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=3c52a38246232970e530
 .then(function(data){
     console.log(data)
     ingresarPeliculas(data, mejorvaloradas, "movie")
+    loader2 = false
+    if(loader1 == false && loader2 == false && loader3 == false){
+        loader.style.display = "none"
+    }
+
 })
 .catch(function(error){
     console.log("El error es: " + error)
@@ -63,6 +77,11 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=3c52a38246232970e5307a09
         </div>
         `
 }
+loader3 = false
+if(loader1 == false && loader2 == false && loader3 == false){
+    loader.style.display = "none"
+}
+
 })
 .catch(function(error){
     console.log("El error es: " + error)
